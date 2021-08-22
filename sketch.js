@@ -19,24 +19,14 @@ function setup() {
 	ball = new Ball(40,5,70,70);
 
 	dustbin1 = new Dustbin(740,540,250,20);
-    dustbin2 = new Ground(650,450,20,220);
+        dustbin2 = new Ground(650,450,20,220);
 	dustbin3 = new Ground(830,450,20,220);
 
 	ground = new Ground(450,570,1000,25);
 
 	wall = new Ground(876,60,20,1000);
-
-	var render = Render.create({
-		element: document.body,
-		engine: engine,
-		options: {
-		  width: 1600,
-		  height: 700,
-		  wireframes: false
-		}
-	  });
+	
 	  Engine.run(engine);
-	  Render.run(render);
 
   
 
