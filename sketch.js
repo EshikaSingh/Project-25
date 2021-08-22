@@ -2,6 +2,7 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
+const Render = Matter.Render;
 
 function preload()
 {
@@ -25,9 +26,17 @@ function setup() {
 
 	wall = new Ground(876,60,20,1000);
 	
+	var render = Render.create({
+		element: document.body,
+		engine: engine,
+		options: {
+		  width: 1600,
+		  height: 700,
+		  wireframes: false
+		}
+	  });
 	  Engine.run(engine);
-
-  
+	  Render.run(render);
 
 }
 
